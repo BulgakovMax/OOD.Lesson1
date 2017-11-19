@@ -1,14 +1,14 @@
 package com.gmail.v.bulgakov.max;
 
 public class Cat {
-
+    
+	private String mood = "d(^o^)b";
 	private String name;
 	private int age;
 	private double weight;
 	private String color;
 	private String gender;
-	private String mood = "d(^o^)b";
-
+	
 	public Cat(String name, int age, double weight, String color, String gender) {
 		this.name = name;
 		this.age = age;
@@ -27,19 +27,11 @@ public class Cat {
 	}
 
 	public void hungry() {
-		System.out.println("meOW, meOW, meooOOOW");
-	}
-
-	public void print() {
-		System.out.println("Mood: " + mood);
-		System.out.println("Name: " + name);
-		System.out.println("Age: " + age);
-		System.out.println("Weight: " + weight);
-		System.out.println("Color: " + color);
-		System.out.println("Gender: " + gender);
 		System.out.println();
+		System.out.println(this.name + " meOW, meOW, meooOOOW");
 	}
 
+	
 	public String getName() {
 		return name;
 	}
@@ -90,11 +82,21 @@ public class Cat {
 
 	Cat feed(Cat a, String food) {
 		System.out.println(mood);
+		if (food == "Food") {
 		a.mood = "^__^";
+		}
 		System.out.println(food);
 		System.out.println(mood);
 		return a;
-
 	}
 
+	@Override
+	public String toString() {
+		return "Cat [mood= " + mood + ", "
+				+ " name= " + name + ","
+				+ " age= " + age + ","
+				+ " color= " + color + ","
+				+ " weight= " + weight + ","
+				+ " gender= " + gender + "]";
+	}
 }
