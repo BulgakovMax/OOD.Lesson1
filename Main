@@ -5,15 +5,15 @@ public class Main {
 	public static void main(String[] args) {
 
 		Cat myCat = new Cat("__m(0.0)m__", "Frei", 1, 5.5, "Ginger", "Male");
-		myCat.print();
+		System.out.println(myCat.toString());
+		
 		Cat bigCat = new Cat("Murzik", 7, 8.5, "Black", "Male");
-		bigCat.print();
+		System.out.println(bigCat.toString());
+		
 		Cat smallCat = new Cat("Kitty", 3, 3.2, "White", "Female");
-		smallCat.print();
+		System.out.println(smallCat.toString());		
 		
 		myCat.hungry();
-		myCat=myCat.feed(myCat, "Food");		
-
+		myCat=myCat.feed(myCat, "Food");	
 	}
-
 }
