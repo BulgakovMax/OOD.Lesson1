@@ -80,7 +80,7 @@ public class Cat {
 		this.mood = mood;
 	}
 
-	Cat feed(Cat a, String food) {
+	public Cat feed(Cat a, String food) {
 		System.out.println(mood);
 		if (food == "Food") {
 		a.mood = "^__^";
